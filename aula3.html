@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03 - Formulários</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+        label, input {
+            display: block;
+        }
+        .radio label,
+        .radio input {
+            display: inline-block;
+        }
+        .checkbox label,
+        .checkbox input {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" value="Kleber">
+            </div>
+            <div>
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" placeholder="Informe sua cidade" required>
+            </div>
+            <div>
+                <label for="cpf">Cpf:</label>
+                <input type="text" name="cpf" value="000.111.222-33" disabled>
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <label for="idade">Idade</label>
+                <input type="number" name="idade" min="0">
+            </div>
+            <div>
+                <label for="data">Escolha uma data</label>
+                <input type="date" name="idade">
+            </div>
+            <div>
+                <label for="senha">Digite a senha</label>
+                <input type="password" name="senha">
+            </div>
+            <label for="preferido">Selecione seu time favorito</label>
+            <div class="radio">
+                <input type="radio" name="preferido">
+                <label>Sao paulo</label>
+            </div>
+            <div class="radio">
+                <input type="radio" name="preferido">
+                <label>Corinthians</label>
+            </div>
+            <div class="radio">
+                <input type="radio" name="preferido">
+                <label>Palmeiras</label>
+            </div>
+            <label for="disciplinas">Selecione as disciplinas do semestre</label>
+            <div class="checkbox">
+                <input type="checkbox" name="disciplinas">
+                <label>Front-end</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="disciplinas[]">
+                <label>Processamento de sinais</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="disciplinas[]">
+                <label>Back-end</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="disciplinas[]">
+                <label>Banco de dados II</label>
+            </div>
+            <div>
+                <label>Selecione um arquivo</label>
+                <input type="file">
+            </div>
+            <div>
+                <label>Selecione um ou mais arquivos</label>
+                <input type="file" name="arquivos[]" multiple>
+            </div>
+            <label>Selecione um produto</label>
+            <div>
+                <select multiple>
+                  <option value="produto_1">Agua</option>  
+                  <option value="produto_2">Cerveja</option>  
+                  <option value="produto_3">Carvão</option>  
+                  <option value="produto_4">Carne</option>  
+                </select>
+            </div>
+
+            <div>
+                <label>Deixe seu comentário</label>
+                <textarea></textarea>
+            </div>
+
+            <div>
+                <fieldset>
+                    <legend>Informe seu nome</legend>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="Nome">
+                    <label for="nome">Sobrenome</label>
+                    <input type="text" name="Sobrenome">
+                </fieldset>
+            </div>
+
+            <div>
+                <label>Informe sua cidade</label>
+                <input type="text" list="cidades">
+
+                <datalist id="cidades">
+                    <option value="Criciuma"></option>
+                    <option value="Içara"></option>
+                    <option value="Ararangua"></option>
+                    <option value="Forquilhinha"></option>
+                </datalist>
+            </div>
+
+            <div>
+                <input style="display: inline-block" type="reset" value="Limpar">
+                <input style="display: inline-block" type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
